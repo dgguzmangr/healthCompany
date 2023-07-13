@@ -16,7 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from authApp.views import authAppViews
 
 urlpatterns = [
+    # user urls
     path('admin/', admin.site.urls),
+    path('create_user/', authAppViews.create_user),
+    path('show_user/', authAppViews.show_user),
+    path('update_user/<int:pk>/', authAppViews.update_user),
+    path('delete_user/<int:pk>/', authAppViews.delete_user),
+    # employee urls
+    path('create_employee/', authAppViews.create_employee),
+    path('show_employee/', authAppViews.show_employee),
+    path('update_employee/<int:pk>/', authAppViews.update_employee),
+    path('delete_employee/<int:pk>/', authAppViews.delete_employee),
 ]

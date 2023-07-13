@@ -2,8 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.base_user import BaseUserManager
 
-# User model
 
+# User model
 class UserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         if not email:
@@ -37,7 +37,7 @@ class User(AbstractBaseUser):
     email = models.EmailField(unique=True)
     cellphone = models.CharField(max_length=15)
     address = models.CharField(max_length=255)
-    discharge_data = models.DateField(auto_now_add=True)
+    discharge_date = models.DateField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
     nickname = models.CharField(max_length=50, unique=True)
 
@@ -70,20 +70,46 @@ class Employee(models.Model):
 
     employee_id = models.AutoField(primary_key=True)
     position = models.CharField(max_length=2, choices=POSITION)
-    area = models.CharField(100)
 
 
 # Assistant model
 class Assistant(models.Model):
     assistant_id = models.AutoField(primary_key=True)
     employee_id = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name='assistant')
-    user = models.OneToOneField(User,on_delete=models.CASCADE, related_name='assistant')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='assistant')
 
 
 # Doctor model
 class Doctor(models.Model):
+    SPECIALITY = (
+        ('ANE', 'Anestesiología'),
+        ('CAR', 'Cardiología'),
+        ('DER', 'Dermatología'),
+        ('END', 'Endocrinología'),
+        ('GAS', 'Gastroenterología'),
+        ('GER', 'Geriatría'),
+        ('GIN', 'Ginecología y Obstetricia'),
+        ('HEM', 'Hematología'),
+        ('INF', 'Infectología'),
+        ('EME', 'Medicina de Emergencia'),
+        ('FAM', 'Medicina Familiar y Comunitaria'),
+        ('INT', 'Medicina Interna'),
+        ('NEF', 'Nefrología'),
+        ('NEU', 'Neumología'),
+        ('NER', 'Neurología'),
+        ('ONC', 'Oncología'),
+        ('OFT', 'Oftalmología'),
+        ('ORT', 'Ortopedia y Traumatología'),
+        ('OTO', 'Otorrinolaringología'),
+        ('PED', 'Pediatría'),
+        ('PSQ', 'Psiquiatría'),
+        ('RAD', 'Radiología'),
+        ('REU', 'Reumatología'),
+        ('URO', 'Urología')
+    )
+
     doctor_id = models.AutoField(primary_key=True)
-    speciality = models.CharField(max_length=200)
+    speciality = models.CharField(max_length=3, choices=SPECIALITY)
     employee_id = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name='doctor')
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='doctor_user')
 
