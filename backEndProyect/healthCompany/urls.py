@@ -32,4 +32,49 @@ urlpatterns = [
     path('show_employee/', authAppViews.show_employee),
     path('update_employee/<int:pk>/', authAppViews.update_employee),
     path('delete_employee/<int:pk>/', authAppViews.delete_employee),
+    # assistant urls
+    path('create_assistant/', authAppViews.create_assistant),
+    path('show_assistant/', authAppViews.show_assistant),
+    path('update_assistant/<int:pk>/', authAppViews.update_assistant),
+    path('delete_assistant/<int:pk>/', authAppViews.delete_assistant),
+    # doctor urls
+    path('create_doctor/', authAppViews.create_doctor),
+    path('show_doctor/', authAppViews.show_doctor),
+    path('update_doctor/<int:pk>/', authAppViews.update_doctor),
+    path('delete_doctor/<int:pk>/', authAppViews.delete_doctor),
+    # nurse urls
+    path('create_nurse/', authAppViews.create_nurse,),
+    path('show_nurse/', authAppViews.show_nurse),
+    path('update_nurse/<int:pk>/', authAppViews.update_nurse),
+    path('delete_nurse/<int:pk>/', authAppViews.delete_nurse),
+    # patient urls
+    path('create_patient/', authAppViews.create_patient),
+    path('show_patient/', authAppViews.show_patient),
+    path('update_patient/<int:pk>/', authAppViews.update_patient),
+    path('delete_patient/<int:pk>/', authAppViews.delete_patient),
+    # relative urls
+    path('create_relative/', authAppViews.create_relative),
+    path('show_relative/', authAppViews.show_relative),
+    path('update_relative/<int:pk>/', authAppViews.update_relative),
+    path('delete_relative/<int:pk>/', authAppViews.delete_relative),
+    # clinic history urls
+    path('create_clinic_history/', authAppViews.create_clinic_history),
+    path('show_clinic_history/', authAppViews.show_clinic_history),
+    path('update_clinic_history/<int:pk>/', authAppViews.update_clinic_history),
+    path('delete_clinic_history/<int:pk>/', authAppViews.delete_clinic_history),
+    # diagnostic urls
+    path('create_diagnostic/', authAppViews.create_diagnostic),
+    path('show_diagnostic/', authAppViews.show_diagnostic),
+    path('update_diagnostic/<int:pk>/', authAppViews.update_diagnostic),
+    path('delete_diagnostic/<int:pk>/', authAppViews.delete_diagnostic),
+    # vital signs urls
+    path('create_vital_signs/', authAppViews.create_vital_signs),
+    path('show_vital_signs/', authAppViews.show_vital_signs),
+    path('update_vital_signs/<int:pk>/', authAppViews.update_vital_signs),
+    path('delete_vital_signs/<int:pk>/', authAppViews.delete_vital_signs),
+    # tips care urls
+    path('create_care_tips/', authAppViews.create_care_tips),
+    path('show_care_tips/', authAppViews.show_care_tips),
+    path('update_care_tips/<int:pk>/', authAppViews.update_care_tips),
+    path('delete_care_tips/<int:pk>/', authAppViews.delete_care_tips),
 ]

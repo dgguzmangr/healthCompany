@@ -198,7 +198,7 @@ class Diagnostic(models.Model):
     datetime = models.DateTimeField(auto_now_add=True)
     observations = models.CharField(max_length=4000)
     treatment_effectiveness = models.CharField(max_length=1, choices=TREATMENT_EFFECTIVENESS)
-    next_visit = models.DateTimeField
+    next_visit = models.DateTimeField()
     clinic_history_id = models.ForeignKey(ClinicHistory, on_delete=models.CASCADE, related_name='diagnostic')
     patient_id = models.OneToOneField(Patient, on_delete=models.CASCADE, related_name='diagnostic')
     doctor_id = models.OneToOneField(Doctor, on_delete=models.CASCADE, related_name='diagnostic')
