@@ -456,3 +456,44 @@ def delete_care_tips(request, pk):
 
     care_tips.delete()
     return Response(status=204)
+
+
+# Main post methods
+@api_view(['POST'])
+def create_main_post(request):
+    serializer = MainPostSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=201)
+    return Response(serializer.errors, status=400)
+
+
+def show_main_post(request):
+    if request.method == 'GET':
+        main_posts = MainPost.objects.all()
+        return JsonResponse([MainPostSerializer(main_post).data for main_post in main_posts], status=200, safe=False)
+
+
+@api_view(['PUT'])
+def update_main_post(request, pk):
+    try:
+        main_post = MainPost.objects.get(pk=pk)
+    except MainPost.DoesNotExist:
+        return Response(status=404)
+
+    serializer = MainPostSerializer(main_post, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+    return Response(serializer.errors, status=400)
+
+
+@api_view(['DELETE'])
+def delete_main_post(request, pk):
+    try:
+        main_post = MainPost.objects.get(pk=pk)
+    except MainPost.DoesNotExist:
+        return Response(status=404)
+
+    main_post.delete()
+    return Response(status=204)

@@ -246,3 +246,15 @@ class CareTipsSerializer(serializers.ModelSerializer):
                                             relative_id=relative_id,
                                             **validated_data)
         return care_tips
+
+
+class MainPostSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MainPost
+        fields = ['main_post_id',
+                  'datetime',
+                  'main_post_img',
+                  'tittle',
+                  'comment']
+        read_only_fields = ['main_post_id', 'datetime']

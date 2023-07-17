@@ -77,4 +77,9 @@ urlpatterns = [
     path('show_care_tips/', authAppViews.show_care_tips),
     path('update_care_tips/<int:pk>/', authAppViews.update_care_tips),
     path('delete_care_tips/<int:pk>/', authAppViews.delete_care_tips),
+    # main post urls
+    path('create_main_post/', authAppViews.create_main_post),
+    path('show_main_post/', authAppViews.show_main_post),
+    path('update_main_post/<int:pk>/', authAppViews.update_main_post),
+    path('delete_main_post/<int:pk>/', authAppViews.delete_main_post),
 ]

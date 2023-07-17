@@ -231,5 +231,14 @@ class CareTips(models.Model):
     doctor_id = models.OneToOneField(Doctor, on_delete=models.CASCADE, related_name='care_tips')
     relative_id = models.OneToOneField(Relative, on_delete=models.CASCADE, related_name='care_tips')
 
+
+class MainPost(models.Model):
+    main_post_id = models.AutoField(primary_key=True)
+    datetime = models.DateTimeField(auto_now_add=True)
+    main_post_img = models.ImageField(upload_to='main_post')
+    tittle = models.CharField(max_length=200)
+    comment = models.CharField(max_length=1000)
+    # para acceder a la imagen de un objeto main_post de la clase MainPost:
+    # <img src="{{ main_post.main_post_img.url }}" alt="Main Post Image">
 # diagnostic = Diagnostic.objects.get(diagnostic_id=1)
 # care_tips = diagnostic.care_tips.all()
