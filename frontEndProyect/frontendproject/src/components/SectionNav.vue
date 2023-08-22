@@ -17,12 +17,12 @@
         </button>
         <div class="collapse navbar-collapse col-10 justify-content-center" id="navbarNav">
           <ul class="navbar-nav d-flex dflex-wrap  justify-content-md- list-unstyled fw-bold" style="font-family: var(--primaryFont); color: var(--colorB-1);">
-            <li><router-link to="/" class="nav-link">INICIO</router-link></li>
-            <li><router-link to="/affiliates" class="nav-link">AFILIADOS</router-link></li>
-            <li><router-link to="/employers" class="nav-link">EMPLEADORES</router-link></li>
-            <li><router-link to="/independent" class="nav-link">INDEPENDIENTES</router-link></li>
-            <li><router-link to="/businessadvisors" class="nav-link">ASESORES COMERCIALES</router-link></li>
-            <li><router-link to="/serviceproviders" class="nav-link">PRESTADORES DE SERVICIO</router-link></li>
+            <li class="px-5"><router-link to="/" class="nav-link">INICIO</router-link></li>
+            <li class="px-5"><router-link to="/affiliates" class="nav-link">AFILIADOS</router-link></li>
+            <li class="px-5"><router-link to="/employers" class="nav-link">EMPLEADORES</router-link></li>
+            <li class="px-5"><router-link to="/independent" class="nav-link">INDEPENDIENTES</router-link></li>
+            <li class="px-5"><router-link to="/businessadvisors" class="nav-link">ASESORES COMERCIALES</router-link></li>
+            <li class="px-5"><router-link to="/serviceproviders" class="nav-link">PRESTADORES DE SERVICIO</router-link></li>
           </ul>
         </div>
       </nav>

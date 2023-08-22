@@ -5,6 +5,10 @@ import EmployersView from '../views/EmployersView'
 import IndependentView from '../views/IndependentView'
 import BusinessAdvisorsView from '../views/BusinessAdvisorsView'
 import ServiceProvidersView from '../views/ServiceProvidersView'
+import LawView from '../views/LawView'
+import FAQ from '../views/FAQ'
+import PQRS from '../views/PQRS'
+import RequestPassword from '../views/RequestPassword'
 
 const routes = [
   {
@@ -44,6 +48,26 @@ const routes = [
     path: '/serviceproviders',
     name: 'serviceproviders',
     component: ServiceProvidersView
+  },
+  {
+    path: '/law',
+    name: 'law',
+    component: LawView
+  },
+  {
+    path: '/faq',
+    name: 'faq',
+    component: FAQ
+  },
+  {
+    path: '/pqrs',
+    name: 'pqrs',
+    component: PQRS
+  },
+  {
+    path: '/requestpassword',
+    name: 'requestpassword',
+    component: RequestPassword
   },
 ]
 

@@ -12,8 +12,6 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Volkhov:wght@700&display=swap" rel="stylesheet">
     </head>
     <nav>
-      <router-link to="/">Inicio</router-link>
-      <router-link to="/about">About</router-link>
     </nav>
     <router-view/>
 
@@ -30,6 +28,7 @@
     --selectedFont1: #1f1f1f;
     --background1: #BFBFBF;
     --background2: #E6C999;
+    --background3: #DFEAE6;
 }
 
 * {
