@@ -2,7 +2,7 @@
     <div class="container-fluid" style="background-color: var(--background3);">
       <nav class="navbar navbar-expand-md navbar-light py-1 text-center">
         <div class="col-1">
-            <img src="@/assets/wing.png" class="img-fluid logo">
+            <img src="@/assets/wing.png" class="img-fluid w-60 logo">
         </div>
         <button
           class="navbar-toggler"
@@ -39,9 +39,3 @@
       </nav>
     </div>
 </template>
-
-<style>
-.logo {
-    width: 60px;
-}
-</style>

@@ -11,8 +11,6 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Volkhov:wght@700&display=swap" rel="stylesheet">
     </head>
-    <nav>
-    </nav>
     <router-view/>
 
   </html>
@@ -73,5 +71,15 @@
   -webkit-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--primaryFont);
+    line-height: 1.2;
+}
+
+p {
+    font-family: var(--secondaryFont);
+    line-height: 0.8;
 }
 </style>
