@@ -1,0 +1,47 @@
+<template>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <SectionNav/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 h-50 bg-primary">
+          <SlidePrueba/>
+        </div>
+      </div>
+      <div class=" row">
+        <div class="col-1 h-100 bg success">
+          <SocialNetworks/>
+        </div>
+        <div class="col-8 bg-info">
+          <h2>main post</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 h-50 bg-danger">
+          <h2>footer</h2>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  // @ is an alias to /src
+  import SectionNav from '@/components/SectionNav.vue'
+  import SlidePrueba from '@/components/SlidePrueba.vue'
+  import SocialNetworks from '@/components/SocialNetworks.vue'
+  
+  export default {
+    name: 'HomeView',
+    components: {
+      SectionNav,
+      SlidePrueba,
+      SocialNetworks,
+      
+    }
+  }
+  </script>
+  <style>
+  </style>
+  
