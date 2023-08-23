@@ -13,7 +13,7 @@
                 <LayoutAssistant/>
             </div>
             <div class="col-10" style="background-color: var(--dashboard);">
-                Dashboard
+                <router-view></router-view>
             </div>
         </div>
         <div class="row">

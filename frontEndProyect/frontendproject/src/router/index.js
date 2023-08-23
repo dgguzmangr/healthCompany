@@ -10,6 +10,10 @@ import FAQ from '../views/FAQ'
 import PQRS from '../views/PQRS'
 import RequestPassword from '../views/RequestPassword'
 import AssistantView from '../views/AssistantView'
+import AssistantPatients from '../views/AssistantPatients'
+import AssistantRelative from '../views/AssistantRelative'
+import AssistantDoctorsView from '../views/AssistantDoctorsView'
+import AssistantNursesView from '../views/AssistantNursesView'
 
 const routes = [
   {
@@ -73,7 +77,29 @@ const routes = [
   {
     path: '/assistant',
     name: 'assistant',
-    component:AssistantView
+    component: AssistantView,
+    children: [
+      {
+        path: '/assistantpatients',
+        name: 'assistantpatients',
+        component: AssistantPatients
+      },
+      {
+        path: '/assistantrelative',
+        name: 'assistantrelative',
+        component: AssistantRelative
+      },
+      {
+        path: '/assistantdoctors',
+        name: 'assistantdoctors',
+        component: AssistantDoctorsView
+      },
+      {
+        path: '/assistantnurses',
+        name: 'assistantnurses',
+        component: AssistantNursesView
+      },
+    ]
   },
 ]
 
