@@ -9,6 +9,7 @@ import LawView from '../views/LawView'
 import FAQ from '../views/FAQ'
 import PQRS from '../views/PQRS'
 import RequestPassword from '../views/RequestPassword'
+import AssistantView from '../views/AssistantView'
 
 const routes = [
   {
@@ -68,6 +69,11 @@ const routes = [
     path: '/requestpassword',
     name: 'requestpassword',
     component: RequestPassword
+  },
+  {
+    path: '/assistant',
+    name: 'assistant',
+    component:AssistantView
   },
 ]
 

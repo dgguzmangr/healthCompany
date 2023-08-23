@@ -33,7 +33,7 @@
                 <li><a class="dropdown-item" href="#">Familiar designado</a></li>
                 <li><a class="dropdown-item" href="#">Médico</a></li>
                 <li><a class="dropdown-item" href="#">Enfermera/o</a></li>
-                <li><a class="dropdown-item" href="#">Asistente</a></li>
+                <li class="dropdown-item"><router-link to="/assistant" class="nav-link">Asistente</router-link></li>
             </ul>
         </div>
       </nav>

@@ -27,6 +27,8 @@
     --background1: #BFBFBF;
     --background2: #E6C999;
     --background3: #DFEAE6;
+    --layout: #96D4D1;
+    --dashboard: #85B2EA;
 }
 
 * {

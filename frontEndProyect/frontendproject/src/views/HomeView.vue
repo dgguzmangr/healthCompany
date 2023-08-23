@@ -16,20 +16,11 @@
       </div>
     </div>
     <div class=" row">
-      <div class="col-1 h-100 bg success">
+      <div class="col-1 h-100">
         <SocialNetworks/>
       </div>
-      <div class="col-8 bg-info">
+      <div class="container-fluid col-12 bg-info d-flex flex-column" style="height: 160px;">
         <h2>main post</h2>
-      </div>
-
-      <div class="col-3 h-50 bg-secondary">
-        <div class="row h-50 bg-success">
-          <h2>twitter</h2>
-        </div>
-        <div class="row h-50 bg-muted">
-          <h2>facebook</h2>
-        </div>
       </div>
     </div>
     <div class="row">
