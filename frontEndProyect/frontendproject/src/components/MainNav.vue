@@ -1,8 +1,8 @@
 <template>
     <div class="container-fluid" style="background-color: var(--background3);">
       <nav class="navbar navbar-expand-md navbar-light py-1 text-center">
-        <div class="col-1">
-            <img src="@/assets/wing.png" class="img-fluid w-60 logo">
+        <div class="col-12 col-md-1">
+            <img src="@/assets/wing.png" class="img-fluid w-50 logo">
         </div>
         <button
           class="navbar-toggler"
@@ -15,16 +15,16 @@
         >
         <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse col-10 justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse col-md-10 justify-content-center" id="navbarNav">
           <ul class="navbar-nav d-flex dflex-wrap  justify-content-md- list-unstyled fw-bold" style="font-family: var(--primaryFont); color: var(--colorB-1);">
-            <li class="px-5"><router-link to="/law" class="nav-link">Ley de transparencia</router-link></li>
-            <li class="px-5"><router-link to="/faq" class="nav-link">Preguntas frecuentes</router-link></li>
-            <li class="px-5"><router-link to="/pqrs" class="nav-link">Escríbenos tus PQRS</router-link></li>
-            <li class="px-5"><router-link to="/requestpassword" class="nav-link">Solicitar clave</router-link></li>
+            <li class="px-3 px-md-5"><router-link to="/law" class="nav-link">Ley de transparencia</router-link></li>
+            <li class="px-3 px-md-5"><router-link to="/faq" class="nav-link">Preguntas frecuentes</router-link></li>
+            <li class="px-3 px-md-5"><router-link to="/pqrs" class="nav-link">Escríbenos tus PQRS</router-link></li>
+            <li class="px-3 px-md-5"><router-link to="/requestpassword" class="nav-link">Solicitar clave</router-link></li>
           </ul>
         </div>
 
-        <div class="dropdown col-1">
+        <div class="dropdown col-12 col-md-1 mt-3 mt-md-0 text-center text-md-end">
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 INICIAR SESIÓN
             </button>
