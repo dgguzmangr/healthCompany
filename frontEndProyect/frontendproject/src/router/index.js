@@ -14,6 +14,9 @@ import AssistantPatients from '../views/AssistantPatients'
 import AssistantRelative from '../views/AssistantRelative'
 import AssistantDoctorsView from '../views/AssistantDoctorsView'
 import AssistantNursesView from '../views/AssistantNursesView'
+import AdminView from '../views/AdminView'
+import AdminUsersView from '../views/AdminUsersView'
+import AdminEmployeeView from '../views/AdminEmployeeView'
 
 const routes = [
   {
@@ -98,6 +101,23 @@ const routes = [
         path: '/assistantnurses',
         name: 'assistantnurses',
         component: AssistantNursesView
+      },
+    ]
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: AdminView,
+    children: [
+      {
+        path: '/adminusers',
+        name: 'adminusers',
+        component: AdminUsersView
+      },
+      {
+        path: '/adminemployee',
+        name: 'adminemployee',
+        component: AdminEmployeeView
       },
     ]
   },

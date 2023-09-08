@@ -34,6 +34,7 @@
                 <li><a class="dropdown-item" href="#">Médico</a></li>
                 <li><a class="dropdown-item" href="#">Enfermera/o</a></li>
                 <li class="dropdown-item"><router-link to="/assistant" class="nav-link">Asistente</router-link></li>
+                <li class="dropdown-item"><router-link to="/admin" class="nav-link">Administrador</router-link></li>
             </ul>
         </div>
       </nav>
