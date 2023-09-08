@@ -35,35 +35,32 @@ export default {
         };
     },
     methods: {
-        async createPatient() {
+        createPatient() {
             const formData = {
-                doctor_id: this.doctorId,
-                nurse_id: this.nurseId,
-                assistant_id: this.assistantId,
+                doctorId: this.doctorId,
+                nurseId: this.nurseId,
+                assistantId: this.assistantId,
                 email: this.email,
                 password: this.password
-                };
-            try {
-                const response = await fetch('/api/create_patient/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        // You might need to include authentication headers if required
-                        },
-                    body: JSON.stringify(formData)
-                    });
-
-                if (response.ok) {
-                    // Patient created successfully
-                    // You can redirect or show a success message here
+            };
+            fetch("http://127.0.0.1:8000/create_patient/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(respose => {
+                if (respose.ok) {
+                    console.log("El paciente se ha creado con éxito.");
                 } else {
-                    const errorData = await response.json();
-                    console.error('Error creating patient:', errorData);
-                    }
-            } catch (error) {
-                console.error('Error creating patient:', error);
-            }
-        }
-    }
+                    console.log("Error al crear el paciente.");
+                }
+            })
+            .catch(error => {
+                console.error("Error de red:", error);
+            });
+        },
+    },
 };
 </script>
