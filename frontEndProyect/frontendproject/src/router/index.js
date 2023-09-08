@@ -17,6 +17,12 @@ import AssistantNursesView from '../views/AssistantNursesView'
 import AdminView from '../views/AdminView'
 import AdminUsersView from '../views/AdminUsersView'
 import AdminEmployeeView from '../views/AdminEmployeeView'
+import PatientView from '../views/PatientView'
+import PatientUserView from '../views/PatientUserView'
+import PatientVitalSignsView from '../views/PatientVitalSignsView'
+import PatientCareTipsView from '../views/PatientCareTipsView'
+import PatientDiagnosticView from '../views/PatientDiagnosticView'
+import RelativeView from '../views/RelativeView'
 
 const routes = [
   {
@@ -120,6 +126,38 @@ const routes = [
         component: AdminEmployeeView
       },
     ]
+  },
+  {
+    path: '/patient',
+    name: 'patient',
+    component: PatientView,
+    children: [
+      {
+        path: '/patientuser',
+        name: 'patientuser',
+        component: PatientUserView
+      },
+      {
+        path: '/patientvitalsigns',
+        name: 'patientvitalsigns',
+        component: PatientVitalSignsView
+      },
+      {
+        path: '/patientcaretips',
+        name: 'patientcaretips',
+        component: PatientCareTipsView
+      },
+      {
+        path: '/patientdiagnostic',
+        name: 'patientdiagnostic',
+        component: PatientDiagnosticView
+      },
+    ]
+  },
+  {
+    path: '/relative',
+    name: 'relative',
+    component: RelativeView
   },
 ]
 

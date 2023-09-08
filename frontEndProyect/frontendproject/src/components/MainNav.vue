@@ -29,7 +29,8 @@
                 INICIAR SESIÓN
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#">Paciente</a></li>
+                <li class="dropdown-item"><router-link to="/patient" class="nav-link">Paciente</router-link></li>
+                <li class="dropdown-item"><router-link to="/relative" class="nav-link">Familiar designado</router-link></li>
                 <li><a class="dropdown-item" href="#">Familiar designado</a></li>
                 <li><a class="dropdown-item" href="#">Médico</a></li>
                 <li><a class="dropdown-item" href="#">Enfermera/o</a></li>
