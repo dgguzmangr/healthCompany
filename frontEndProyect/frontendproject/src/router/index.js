@@ -23,6 +23,13 @@ import PatientVitalSignsView from '../views/PatientVitalSignsView'
 import PatientCareTipsView from '../views/PatientCareTipsView'
 import PatientDiagnosticView from '../views/PatientDiagnosticView'
 import RelativeView from '../views/RelativeView'
+import RelativeUserView from '../views/RelativeUserView'
+import RelativeVitalSignsView from '../views/RelativeVitalSignsView'
+import RelativeCareTipsView from '../views/RelativeCareTipsView'
+import DoctorView from '../views/DoctorView'
+import DoctorPatientView from '../views/DoctorPatientView'
+import NurseView from '../views/NurseView'
+import NursePatientView from '../views/NursePatientView'
 
 const routes = [
   {
@@ -157,7 +164,48 @@ const routes = [
   {
     path: '/relative',
     name: 'relative',
-    component: RelativeView
+    component: RelativeView,
+    children: [
+      {
+        path: '/relativeuser',
+        name: 'relativeuser',
+        component: RelativeUserView
+      },
+      {
+        path: '/relativevitalsigns',
+        name: 'relativevitalsigns',
+        component: RelativeVitalSignsView
+      },
+      {
+        path: '/relativecaretips',
+        name: 'relativecaretips',
+        component: RelativeCareTipsView
+      },
+    ]
+  },
+  {
+    path: '/doctor',
+    name: 'doctor',
+    component: DoctorView,
+    children: [
+      {
+        path: '/doctorpatient',
+        name: 'doctorpatient',
+        component: DoctorPatientView
+      },
+    ]
+  },
+  {
+    path: '/nurse',
+    name: 'nurse',
+    component: NurseView,
+    children: [
+      {
+        path: '/nursepatient',
+        name: 'nursepatient',
+        component: NursePatientView
+      },
+    ]
   },
 ]
 

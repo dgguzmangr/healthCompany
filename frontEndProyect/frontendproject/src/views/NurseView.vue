@@ -10,13 +10,9 @@
                 <SocialNetworks/>
             </div>
             <div class="col-1">
-                <LayoutPatient/>
+                <LayoutNurse/>
             </div>
             <div class="col-10" style="background-color: var(--dashboard);">
-                <div>
-                    <h3>NÚMERO DE HISTORIA CLÍNICA</h3>
-                    <h5>MOSTRAR ASISTENTE, DOCTOR, ENFERMERO Y FAMILIAR ASIGNADO</h5>
-                </div>
                 <router-view></router-view>
             </div>
         </div>
@@ -29,7 +25,7 @@
 <script>
     // @ is an alias to /src
     import MainNav from '@/components/MainNav.vue'
-    import LayoutPatient from '@/components/LayoutPatient.vue'
+    import LayoutNurse from '@/components/LayoutNurse.vue'
     import SocialNetworks from '@/components/SocialNetworks.vue'
     import FooterSection from '@/components/FooterSection.vue'
   
@@ -37,7 +33,7 @@
     name: 'HomeView',
     components: {
         MainNav,
-        LayoutPatient,
+        LayoutNurse,
         SocialNetworks,
         FooterSection,
     }

@@ -10,10 +10,9 @@
                 <SocialNetworks/>
             </div>
             <div class="col-1">
-                <LayoutPatient/>
+                <LayoutRelative/>
             </div>
             <div class="col-10" style="background-color: var(--dashboard);">
-                <div><h3>NÚMERO DE HISTORIA CLÍNICA</h3></div>
                 <router-view></router-view>
             </div>
         </div>
@@ -26,7 +25,7 @@
 <script>
     // @ is an alias to /src
     import MainNav from '@/components/MainNav.vue'
-    import LayoutPatient from '@/components/LayoutPatient.vue'
+    import LayoutRelative from '@/components/LayoutRelative.vue'
     import SocialNetworks from '@/components/SocialNetworks.vue'
     import FooterSection from '@/components/FooterSection.vue'
   
@@ -34,7 +33,7 @@
     name: 'HomeView',
     components: {
         MainNav,
-        LayoutPatient,
+        LayoutRelative,
         SocialNetworks,
         FooterSection,
     }

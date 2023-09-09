@@ -31,9 +31,8 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li class="dropdown-item"><router-link to="/patient" class="nav-link">Paciente</router-link></li>
                 <li class="dropdown-item"><router-link to="/relative" class="nav-link">Familiar designado</router-link></li>
-                <li><a class="dropdown-item" href="#">Familiar designado</a></li>
-                <li><a class="dropdown-item" href="#">Médico</a></li>
-                <li><a class="dropdown-item" href="#">Enfermera/o</a></li>
+                <li class="dropdown-item"><router-link to="/doctor" class="nav-link">Médico</router-link></li>
+                <li class="dropdown-item"><router-link to="/nurse" class="nav-link">Enfermera</router-link></li>
                 <li class="dropdown-item"><router-link to="/assistant" class="nav-link">Asistente</router-link></li>
                 <li class="dropdown-item"><router-link to="/admin" class="nav-link">Administrador</router-link></li>
             </ul>
